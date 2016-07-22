@@ -1,0 +1,7 @@
+D:\prashant\CGI.CSharp.MiniProject\CGI.CSharp.MiniProject\bin\Debug\CGI.CSharp.MiniProject.exe
+D:\prashant\CGI.CSharp.MiniProject\CGI.CSharp.MiniProject\bin\Debug\CGI.CSharp.MiniProject.pdb
+D:\prashant\CGI.CSharp.MiniProject\CGI.CSharp.MiniProject\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\prashant\CGI.CSharp.MiniProject\CGI.CSharp.MiniProject\obj\x86\Debug\CGI.CSharp.MiniProject.exe
+D:\prashant\CGI.CSharp.MiniProject\CGI.CSharp.MiniProject\obj\x86\Debug\CGI.CSharp.MiniProject.pdb
+C:\Users\win7.pc-PC\Desktop\prashant\CGI.CSharp.MiniProject\CGI.CSharp.MiniProject\obj\x86\Debug\CGI.CSharp.MiniProject.exe
+C:\Users\win7.pc-PC\Desktop\prashant\CGI.CSharp.MiniProject\CGI.CSharp.MiniProject\obj\x86\Debug\CGI.CSharp.MiniProject.pdb

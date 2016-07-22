@@ -1,0 +1,143 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderReview.aspx.cs" Inherits="Flipkart.OrderReview" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        body
+        {
+            position: absolute;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            background-color: #eee;
+        }
+        #container
+        {
+            position: absolute;
+            right: 0px;
+            left: 0px;
+            width: 1336px;
+            height: 1024px;
+            background-color: #eee;
+            overflow: auto;
+        }
+        .header
+        {
+            position: fixed;
+            z-index: 100;
+            width: 1336px;
+            height: 60px;
+            background-color: #157ed2;
+        }
+        .headerLogo
+        {
+            float: left;
+            width: 130px;
+            margin-left: 200px;
+            margin-top: 10px;
+        }
+        .headerSearchBox
+        {
+            float: left;
+            width: auto;
+            margin-left:20px;
+            margin-top:20px;
+        }
+.searchBtn
+{
+   width:105px;
+   background-color:#fdd922;
+ 
+   
+}
+.searchBox
+{
+   
+    width:400px;   
+    
+}
+.diplaySignIn
+{
+    display:inline-block;
+    color:White;
+    text-decoration:none;
+}
+.orderDetails
+{
+    width: 1336px;
+    margin-top:100px;
+     margin-left: 200px;
+     width:800px;
+     background-color:#a49b9b
+     
+    
+}
+.mainRow td
+{
+    background-color:#cfcfcf;
+    padding:0 50px 0 50px;
+}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="container">
+        <div class="header">
+            <div class="headerLogo">
+                <img src="images/flipkart.png" width="140px" />
+            </div>
+            
+            <div class="headerSearchBox">
+                <asp:TextBox runat="server" ID="txtSearch" class="searchBox" placeholder="Want to search more products?" />
+                <asp:Button Text="Search" runat="server" ID="btnSearch" class="searchBtn" />
+              
+                <asp:Label Text="" runat="server" ID="lblUserName" style="color:White; font-size:20px;" />
+                 <asp:Button Text="SignOut" ID="cmdSignOut" runat="server" onclick="cmdSignOut_Click" 
+         />
+            </div>
+        </div>
+        <div class="orderDetails">
+        <table cellspacing="10px" >
+        <tr class="mainRow">
+        <td> Item</td>
+         <td> Quantity </td>
+          <td> Price</td>
+           <td> Description</td>
+            <td>SubTotal</td>
+        </tr>
+ 
+        <tr>
+         <td>
+        <asp:Image ImageUrl="" runat="server" ID="imgBuy" Width="100px" />
+    </td>
+       
+         <td> 
+             <asp:DropDownList runat="server" ID="ddlQuantity" 
+                 onselectedindexchanged="ddlQuantity_SelectedIndexChanged" 
+                 AutoPostBack="True" >
+                 <asp:ListItem  Text="1" />
+                 <asp:ListItem  Text="2" />
+                 <asp:ListItem  Text="3" />
+                 <asp:ListItem  Text="4" />
+                 <asp:ListItem  Text="5" />
+                 <asp:ListItem  Text="6" />
+             </asp:DropDownList>
+             <asp:Label Text="" ID="lbleQuantity" runat="server" />
+              </td>
+          <td> <asp:Label Text="" runat="server"  ID="lblPrice" /></td>
+           <td> <asp:Label Text="" runat="server" ID="lblDesc"  /></td>
+            <td><asp:Label Text="" runat="server"  ID="lblTotal" /></td>
+        </tr>
+
+        </table>
+        <div style="background-color:#fdd922; text-align:center;"><asp:Button ID="cmdBuy" 
+                Text="Submit" runat="server" style="background-color:#ff9906;" 
+                onclick="cmdBuy_Click" /></div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

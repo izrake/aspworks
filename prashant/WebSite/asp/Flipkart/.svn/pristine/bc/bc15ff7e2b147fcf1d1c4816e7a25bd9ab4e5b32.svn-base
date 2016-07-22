@@ -1,0 +1,69 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+
+namespace Flipkart
+{
+    public partial class UserPageFlipkart : System.Web.UI.Page
+    {
+        //SqlConnection conObj = new SqlConnection();
+        //SqlCommand cmdObj = new SqlCommand();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            //conObj = new SqlConnection(ConfigurationManager.ConnectionStrings["ConCGI"].ConnectionString);
+            if (!IsPostBack)
+            {
+                if (Session["Username"] == null)
+                {
+                    Response.Redirect("SignIn.aspx");
+                }
+                //else
+                //{
+                //    DataLoad();
+
+                //}
+            }
+
+        }
+
+        private void DataLoad()
+        {
+            //LinkButton lnk = Page.Master.FindControl("lnkSignUp") as LinkButton;
+            //lnk.Visible = false;
+            //LinkButton lnlSignIn = Page.Master.FindControl("lnlSignIn") as LinkButton;
+            //lnlSignIn.Visible = false;
+           
+            
+            //Label lbl = Page.Master.FindControl("lblName") as Label;//this is to change the labels in the master
+            //lbl.Text = Session["Name"].ToString();
+
+            //SqlConnection conObj = new SqlConnection("Data Source=pc-PC;Initial Catalog=Flipkart;Integrated Security=true");
+
+            //SqlCommand cmdObj = new SqlCommand("select * from Product", conObj);
+            //if (conObj.State == ConnectionState.Closed)
+            //{
+            //    conObj.Open();
+            //}
+            //SqlDataAdapter adapter = new SqlDataAdapter(cmdObj);
+            //DataSet ds = new DataSet();
+            //adapter.Fill(ds, "Product");
+            //DataUser.DataSource = ds.Tables["Product"];
+            //DataUser.DataBind();
+
+        }
+
+        //protected void DataUser_ItemCommand(object source, DataListCommandEventArgs e)
+        //{
+        //    if (e.CommandName == "BuyNow")
+        //    {
+        //        Response.Redirect("OrderReview.aspx?ID=" + e.CommandArgument);
+        //    }
+        //}
+    }
+}

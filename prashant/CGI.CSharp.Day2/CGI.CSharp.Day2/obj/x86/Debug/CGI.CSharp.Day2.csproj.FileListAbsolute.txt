@@ -1,0 +1,7 @@
+D:\prashant\CGI.CSharp.Day2\CGI.CSharp.Day2\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\prashant\CGI.CSharp.Day2\CGI.CSharp.Day2\bin\Debug\CGI.CSharp.Day2.exe
+D:\prashant\CGI.CSharp.Day2\CGI.CSharp.Day2\bin\Debug\CGI.CSharp.Day2.pdb
+D:\prashant\CGI.CSharp.Day2\CGI.CSharp.Day2\obj\x86\Debug\CGI.CSharp.Day2.exe
+D:\prashant\CGI.CSharp.Day2\CGI.CSharp.Day2\obj\x86\Debug\CGI.CSharp.Day2.pdb
+D:\prashant\CGI.CSharp.Day2\CGI.CSharp.Day2\bin\Debug\AccesssExample.dll
+D:\prashant\CGI.CSharp.Day2\CGI.CSharp.Day2\bin\Debug\AccesssExample.pdb

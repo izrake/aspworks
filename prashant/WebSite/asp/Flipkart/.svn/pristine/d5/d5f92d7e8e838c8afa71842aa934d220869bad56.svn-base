@@ -1,0 +1,229 @@
+﻿body
+{
+    position:absolute;
+    margin-top:0px;
+    margin-left:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    background-color:#eee;
+}
+#container
+{
+    position:absolute;
+   
+    right:0px;
+    left:0px;
+    width:1336px;
+    height:1024px;
+    background-color:#eee  ;
+    overflow:auto;
+}
+.header
+{
+    position:fixed;
+    z-index:100;
+    width:1336px;
+    height:85px;
+    background-color:#157ed2;
+}
+.footer
+{
+    float:left;
+    background-color:Fuchsia;
+    width:1336px;
+    height:180px;
+    
+   
+}
+.menubar
+{
+    margin-top:85px;
+    width:1336px;
+    height:50px;
+    background-color:#006cb4;
+}
+.imgLogo
+{
+    margin-top:35px;
+    margin-left:172px;
+    width:150px;
+    height:40px;
+    
+}
+ul {
+    list-style-type: none;
+    margin-left: 172px;
+    padding: 0;
+    overflow: hidden;
+   
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: #eee;
+    color:Black;
+}
+
+.searchBox
+{
+    padding-top:15px;
+    margin-left:30px;
+    width:400px;   
+    text-align:center; 
+}
+.adjust
+{
+    float:left;
+    top:0px;
+    background-color:Black;
+    margin-left:100px;
+}
+.searchBtn
+{
+   width:105px;
+   padding-top:10px;
+   line-height: 20px;
+   background-color:#fdd922;
+   font-size:15px;
+   
+}
+.signupsignin
+{
+    float:left;
+    background-color:Black;
+}
+.hdOne
+{
+    float:left;
+    margin-right:30px;
+}
+.hdTwo
+{
+  color:White;
+  float:left;
+}
+.lblMargin
+{
+    margin-left:10px;
+}
+.content
+{
+    float:left;
+    overflow:auto;
+    width:950px;
+    height:700px;
+    border:1px solid red;
+}
+.caurausel
+{
+    width:930px;
+    height:225px;
+    margin-top:10px;
+ 
+    margin-left:10px;
+}
+.advertise
+{
+    width:380px;
+    overflow:hidden;
+    float:right;
+    border:border:1px solid black;
+    height:700px;
+
+}
+#timerCall
+{
+    float:right;
+    color:White;
+    padding:15px
+}
+.addContainer
+{
+    overflow:auto;
+    width:320px;
+    text-align:center;
+    margin-left:30px;
+    
+}
+.dataContent
+{
+    width:920px;
+    border:2px solid red;
+    overflow:auto;
+    margin-left:10px;
+}
+ .button5 {font-size: 24px;}
+* {box-sizing:border-box}
+
+
+/* Slideshow container */
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px; 
+  background-color: #bbb;
+  border-radius: 50%;
+  margin:9px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+a
+{
+    text-decoration:none;
+    color:White;
+}

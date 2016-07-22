@@ -1,0 +1,12 @@
+D:\CGI.CSharp.MProject\CGI.CSharp.MProject\bin\Debug\CGI.CSharp.MProject.exe
+D:\CGI.CSharp.MProject\CGI.CSharp.MProject\bin\Debug\CGI.CSharp.MProject.pdb
+D:\CGI.CSharp.MProject\CGI.CSharp.MProject\obj\x86\Debug\CGI.CSharp.MProject.exe
+D:\CGI.CSharp.MProject\CGI.CSharp.MProject\obj\x86\Debug\CGI.CSharp.MProject.pdb
+C:\Users\win7.pc-PC\Desktop\CGI.CSharp.MProject\CGI.CSharp.MProject\obj\x86\Debug\CGI.CSharp.MProject.exe
+C:\Users\win7.pc-PC\Desktop\CGI.CSharp.MProject\CGI.CSharp.MProject\obj\x86\Debug\CGI.CSharp.MProject.pdb
+C:\Users\win7.pc-PC\Desktop\CGI.CSharp.MProject\CGI.CSharp.MProject\bin\Debug\CGI.CSharp.MProject.exe
+C:\Users\win7.pc-PC\Desktop\CGI.CSharp.MProject\CGI.CSharp.MProject\bin\Debug\CGI.CSharp.MProject.pdb
+C:\Users\win7.pc-PC\Desktop\CGI.CSharp.MProject\CGI.CSharp.MProject\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\CGI.CSharp.MProject\CGI.CSharp.MProject\obj\x86\Debug\CGI.CSharp.MProject.csprojResolveAssemblyReference.cache
+C:\Users\win7.pc-PC\Desktop\prashant\CGI.CSharp.MProject\CGI.CSharp.MProject\obj\x86\Debug\CGI.CSharp.MProject.exe
+C:\Users\win7.pc-PC\Desktop\prashant\CGI.CSharp.MProject\CGI.CSharp.MProject\obj\x86\Debug\CGI.CSharp.MProject.pdb

@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+
+namespace Flipkart
+{
+    /// <summary>
+    /// Summary description for ImageHandler
+    /// </summary>
+    public class ImageHandler : IHttpHandler
+    {
+
+        public void ProcessRequest(HttpContext context)
+        {
+            string id = context.Request.QueryString["ID"] as string;
+              SqlConnection conObj = new SqlConnection(ConfigurationManager.ConnectionStrings["ConCGI"].ConnectionString);
+           
+            SqlCommand cmdObj = new SqlCommand("select * from Product where ProductCode=@id", conObj);
+
+            cmdObj.Parameters.AddWithValue("@id", id);
+            if (conObj.State == ConnectionState.Closed)
+            {
+                conObj.Open();
+            }
+
+            SqlDataReader rdr = cmdObj.ExecuteReader();
+
+            if (rdr.HasRows)
+            {
+                rdr.Read();
+            }
+
+            context.Response.BinaryWrite((byte[])rdr["PImage"]);
+            rdr.Close();
+            conObj.Close();
+            context.Response.End();
+
+            
+            
+        }
+
+        public bool IsReusable
+        {
+            get
+            {
+                return false;
+            }
+        }
+    }
+}

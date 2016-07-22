@@ -1,0 +1,5 @@
+D:\prashant\CGI.CSharp.Day4\CGI.CSharp.Day4\bin\Debug\CGI.CSharp.Day4.exe
+D:\prashant\CGI.CSharp.Day4\CGI.CSharp.Day4\bin\Debug\CGI.CSharp.Day4.pdb
+D:\prashant\CGI.CSharp.Day4\CGI.CSharp.Day4\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\prashant\CGI.CSharp.Day4\CGI.CSharp.Day4\obj\x86\Debug\CGI.CSharp.Day4.exe
+D:\prashant\CGI.CSharp.Day4\CGI.CSharp.Day4\obj\x86\Debug\CGI.CSharp.Day4.pdb

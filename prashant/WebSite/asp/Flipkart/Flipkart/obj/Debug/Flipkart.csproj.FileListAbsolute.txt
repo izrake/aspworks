@@ -1,0 +1,10 @@
+C:\Users\win7.pc-PC\Desktop\prashant\WebSite\asp\Flipkart\Flipkart\bin\Flipkart.dll
+C:\Users\win7.pc-PC\Desktop\prashant\WebSite\asp\Flipkart\Flipkart\bin\Flipkart.pdb
+C:\Users\win7.pc-PC\Desktop\prashant\WebSite\asp\Flipkart\Flipkart\obj\Debug\Flipkart.dll
+C:\Users\win7.pc-PC\Desktop\prashant\WebSite\asp\Flipkart\Flipkart\obj\Debug\Flipkart.pdb
+C:\Users\win7.pc-PC\Desktop\prashant\WebSite\asp\Flipkart\Flipkart\bin\Flipkart.dll.config
+C:\Users\prashannt\Desktop\WebSite\asp\Flipkart\Flipkart\bin\Flipkart.dll.config
+C:\Users\prashannt\Desktop\WebSite\asp\Flipkart\Flipkart\bin\Flipkart.dll
+C:\Users\prashannt\Desktop\WebSite\asp\Flipkart\Flipkart\bin\Flipkart.pdb
+C:\Users\prashannt\Desktop\WebSite\asp\Flipkart\Flipkart\obj\Debug\Flipkart.dll
+C:\Users\prashannt\Desktop\WebSite\asp\Flipkart\Flipkart\obj\Debug\Flipkart.pdb

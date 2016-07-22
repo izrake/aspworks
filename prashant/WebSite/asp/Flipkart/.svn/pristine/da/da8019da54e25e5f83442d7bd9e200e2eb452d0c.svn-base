@@ -1,0 +1,47 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/FlipkartMain.Master" AutoEventWireup="true" CodeBehind="UserPageFlipkart.aspx.cs" Inherits="Flipkart.UserPageFlipkart" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Advertisement" runat="server">
+<img src="images/adver1.png" alt="not available" /><img src="images/adver1.png" alt="not available" />
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="DataContent" runat="server">
+    <asp:DataList runat="server" ID="DataUser" HorizontalAlign="Center" 
+        RepeatColumns="4" RepeatDirection="Horizontal" 
+        onitemcommand="DataUser_ItemCommand">
+        <ItemTemplate>
+            <table >
+                    <tr>
+                        <td>
+                            <asp:Image ID="Image1" ImageUrl='<%#"~/ImageHandler.ashx?ID="+Eval("ProductCode")%>' runat="server" Width="90" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label Text='<%#Eval("ProductName")%>' runat="server" ID="lblName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label Text='<%#Eval("Category")%>' runat="server" ID="lblCategory" />
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <asp:Label Text='<%#Eval("P_Description")%>' runat="server" ID="lblDesc" />
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <asp:Label Text='<%#Eval("Price")%>' runat="server" ID="lblPrice" />
+                        </td>
+                    </tr>
+                  <tr>
+                  <td>
+                      <asp:Button  Text="Buy Now" CommandName="BuyNow" CommandArgument='<%#Eval("ProductCode") %>' runat="server" />
+                  </td>
+                  </tr>
+                    
+                </table>
+        </ItemTemplate>
+    </asp:DataList>
+
+</asp:Content>

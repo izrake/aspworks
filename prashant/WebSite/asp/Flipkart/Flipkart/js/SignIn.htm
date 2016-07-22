@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="Stylesheet" type="text/css" href="GmailStyling.css" />
+    <title>Sign In</title>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            
+
+            $("input[type!=submit]").focus(function () {
+                $(this).css("background-color", "#cccccc");
+            });
+            $("input[type!=submit]").blur(function () {
+                $(this).css("background-color", "#ffffff");
+            });
+
+
+
+            $("#signIn").click(function (e) {
+                isvalid = true;
+                
+
+                $("input[type!=submit]").each(function () {
+                    if ($(this).val() == "") {
+                        isvalid = false;
+                        $(this).css("border", "2px solid red");
+                    }
+                    else {
+                        $(this).css("border", "");
+                    }
+                });
+                if (isvalid) {
+                    alert("Succesfull");
+                }
+                else {
+                    e.preventDefault();
+
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+  
+    <div id="signInContainer">
+        <div class="SignInLogoCenter">
+            <img src="images/download.png" alt="not available" class="signInLogo" /></div>
+        <div class="belowSignInLogo">
+            <img src="images/signInLo.PNG" alt="not available" /></div>
+        <div class="signInDetails">
+            <img src="images/imageLogo.PNG" alt="not available" /><br />
+            <input type="text" placeholder="Enter your name" class="resizedTextbox"  /><br />
+            <input type="password" placeholder="Enter your password" class="resizedTextPass"
+                /><br />
+            <input type="submit" placeholder="Enter your password" value="SignIn" class="signInButton" id="signIn"
+                 />
+            <p style="text-align: right; padding-right: 10px">
+                <a class="anchor" href="www.google.com">Need Help?</a>
+            </p>
+        </div>
+        <div class="belowSignGetDetails">
+            <a class="anchor" href="Index.htm">Create Account</a>
+        </div>
+        <div class="footerSignIn">
+            <img src="images/allP.PNG" alt="not available" /></div>
+    </div>
+ 
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+
+namespace Flipkart
+{
+    public partial class SignIn : System.Web.UI.Page
+    {
+        SqlConnection conObj = new SqlConnection();
+        SqlCommand cmdObj = new SqlCommand();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            conObj = new SqlConnection(ConfigurationManager.ConnectionStrings["ConCGI"].ConnectionString);
+        }
+
+        protected void cmdSignIn_Click(object sender, EventArgs e)
+        {
+            cmdObj = new SqlCommand("select * from GmailSignUp where G_UserName=@username and G_Password=@password",conObj);
+            cmdObj.Parameters.AddWithValue("@username", txtUsername.Text);
+            cmdObj.Parameters.AddWithValue("@password", txtPass.Text);
+            if (conObj.State == ConnectionState.Closed)
+                conObj.Open();
+            SqlDataReader rdr = cmdObj.ExecuteReader();
+            rdr.Read();
+            if (rdr.HasRows)
+            {
+                string name = rdr["G_FName"].ToString();
+                string username = rdr["G_Username"].ToString();
+                string password = rdr["G_Password"].ToString();
+                if (username == "prashant" && password == "maurya00")
+                {
+                    Session["Username"] = txtUsername.Text;
+                    Session["Name"] = name;
+                    Response.Redirect("AdminFlipkart.aspx");
+                }
+                else
+                {
+                    Session["Username"] = txtUsername.Text;
+                    Session["Name"] = name;
+                    Response.Redirect("UserPageFlipkart.aspx");
+                }
+            }
+            else
+            {
+                Session["Username"] = "Guest";
+                Session["Name"] = null;
+                Response.Redirect("UserPageFlipkart.aspx");
+            }
+           
+                
+                
+            cmdObj.Dispose();
+            conObj.Close();
+        }
+    }
+}

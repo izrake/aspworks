@@ -1,0 +1,5 @@
+C:\Users\win7.pc-PC\Desktop\prashant\asp\Registration\Registration\bin\Registration.dll
+C:\Users\win7.pc-PC\Desktop\prashant\asp\Registration\Registration\bin\Registration.pdb
+C:\Users\win7.pc-PC\Desktop\prashant\asp\Registration\Registration\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\win7.pc-PC\Desktop\prashant\asp\Registration\Registration\obj\Debug\Registration.dll
+C:\Users\win7.pc-PC\Desktop\prashant\asp\Registration\Registration\obj\Debug\Registration.pdb

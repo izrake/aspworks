@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="STUDENTDETAILS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="STUDENT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NAME" type="xs:string" />
+              <xs:element name="CITY">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Chennai" />
+                    <xs:enumeration value="ALLAHABAD" />
+                    <xs:enumeration value="VARANASI" />
+                    <xs:enumeration value="Kanpur" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="MOBILENO" >
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="[7-9]{1}\d{9}" />                    
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>            
+            </xs:sequence>
+            <xs:attribute name="ID"  use="required" >
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:pattern value="[SS]{2}\d{3}" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

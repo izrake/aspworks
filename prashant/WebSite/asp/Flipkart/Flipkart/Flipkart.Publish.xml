@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\win7.pc-PC\Desktop\flipkar" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="OrderReview.aspx" publishTime="07/10/2016 17:24:31" />
+    <file relUrl="bin/Flipkart.pdb" publishTime="07/11/2016 12:02:32" />
+    <file relUrl="js/jquery-ui.min.js" publishTime="07/06/2016 00:32:04" />
+    <file relUrl="ErrorLog.txt" publishTime="07/10/2016 15:49:20" />
+    <file relUrl="images/am.jpg" publishTime="07/06/2016 00:31:40" />
+    <file relUrl="Global.asax" publishTime="07/08/2016 16:42:10" />
+    <file relUrl="images/flipkart.png" publishTime="07/06/2016 00:31:44" />
+    <file relUrl="Registration.aspx" publishTime="07/06/2016 15:03:06" />
+    <file relUrl="images/gImahe.png" publishTime="07/06/2016 00:31:46" />
+    <file relUrl="bin/Flipkart.dll" publishTime="07/11/2016 12:02:32" />
+    <file relUrl="images/Screen-Shot-2016-03-31-at-9.32.45-AM - Copy.png" publishTime="07/06/2016 00:31:58" />
+    <file relUrl="images/download.png" publishTime="07/06/2016 00:31:44" />
+    <file relUrl="Main.aspx" publishTime="07/06/2016 00:32:04" />
+    <file relUrl="js/jquery-ui.js" publishTime="07/06/2016 00:32:04" />
+    <file relUrl="js/SignIn.htm" publishTime="07/06/2016 00:32:04" />
+    <file relUrl="images/2.jpg" publishTime="07/06/2016 00:31:32" />
+    <file relUrl="images/mo4.PNG" publishTime="07/06/2016 00:31:54" />
+    <file relUrl="images/addver2.png" publishTime="07/06/2016 00:31:34" />
+    <file relUrl="images/signInLo.PNG" publishTime="07/06/2016 00:31:58" />
+    <file relUrl="WebForm1.aspx" publishTime="07/07/2016 15:01:37" />
+    <file relUrl="Error.aspx" publishTime="07/10/2016 15:44:28" />
+    <file relUrl="images/Capture.PNG" publishTime="07/06/2016 00:31:44" />
+    <file relUrl="images/adver1.png" publishTime="07/06/2016 00:31:36" />
+    <file relUrl="images/gmail-login.png" publishTime="07/06/2016 00:31:46" />
+    <file relUrl="images/mo5.jpg" publishTime="07/06/2016 00:31:56" />
+    <file relUrl="images/mo6.jpg" publishTime="07/06/2016 00:31:56" />
+    <file relUrl="images/amaz.jpg" publishTime="07/06/2016 00:31:42" />
+    <file relUrl="images/1.jpg" publishTime="07/06/2016 00:31:30" />
+    <file relUrl="images/54f6dc9c6ae8c903f48e3692dede51165242759317160805024.jpg" publishTime="07/06/2016 00:31:34" />
+    <file relUrl="css/Main.css" publishTime="07/09/2016 12:53:20" />
+    <file relUrl="images/b3847583637cda070f7fd0c73bf13d831212864808503617166.jpg" publishTime="07/06/2016 00:31:42" />
+    <file relUrl="js/jquery-1.12.4.min.js" publishTime="07/06/2016 00:32:04" />
+    <file relUrl="images/20160630_142024_730x300_hpw-moto.jpg" publishTime="07/06/2016 00:31:32" />
+    <file relUrl="images/mo7.jpg" publishTime="07/06/2016 00:31:56" />
+    <file relUrl="images/allP.PNG" publishTime="07/06/2016 00:31:38" />
+    <file relUrl="js/jquery-1.12.4.js" publishTime="07/06/2016 00:32:04" />
+    <file relUrl="images/LENO.jpg" publishTime="07/06/2016 00:31:48" />
+    <file relUrl="images/ama.jpg" publishTime="07/06/2016 00:31:40" />
+    <file relUrl="SignIn.aspx" publishTime="07/10/2016 16:50:34" />
+    <file relUrl="css/GmailStyling.css" publishTime="07/06/2016 00:31:28" />
+    <file relUrl="images/mo2.jpg" publishTime="07/06/2016 00:31:54" />
+    <file relUrl="images/mo.jpg" publishTime="07/06/2016 00:31:52" />
+    <file relUrl="AdminFlipkart.aspx" publishTime="07/10/2016 11:30:36" />
+    <file relUrl="images/All Google Product.PNG" publishTime="07/06/2016 00:31:38" />
+    <file relUrl="Flipkart.aspx" publishTime="07/10/2016 14:49:45" />
+    <file relUrl="App.config" publishTime="07/06/2016 00:31:24" />
+    <file relUrl="css/jquery-ui.css" publishTime="07/06/2016 00:31:28" />
+    <file relUrl="UserPageFlipkart.aspx" publishTime="07/11/2016 12:03:04" />
+    <file relUrl="ImageHandler.ashx" publishTime="07/08/2016 16:21:48" />
+    <file relUrl="images/imageLogo.PNG" publishTime="07/06/2016 00:31:46" />
+    <file relUrl="FlipkartMain.Master" publishTime="07/10/2016 14:53:29" />
+    <file relUrl="images/mo1.jpg" publishTime="07/06/2016 00:31:54" />
+    <file relUrl="Web.config" publishTime="07/11/2016 13:05:52" />
+  </publishProfile>
+</publishData>

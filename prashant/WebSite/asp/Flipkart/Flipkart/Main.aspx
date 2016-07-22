@@ -1,0 +1,191 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="Flipkart.Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="Stylesheet" href="css/Main.css" />
+    <script src="js/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.js" type="text/javascript"></script>
+    <style type="text/css">
+        li.dropdown
+        {
+            display: inline-block;
+         
+        }
+        
+        .dropdown-content
+        {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+             z-index:100;
+        }
+        
+        .dropdown-content a
+        {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content a:hover
+        {
+            background-color: #f1f1f1;
+        }
+        
+        .dropdown:hover .dropdown-content
+        {
+            display: block;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function setTimeFor() {
+            setInterval(function () { setTimerForDay() }, 1000);
+        }
+
+        function setTimerForDay() {
+            var d = new Date();
+            document.getElementById("timerCall").innerHTML = d.toLocaleTimeString();
+        }
+    </script>
+</head>
+<body onload="setTimeFor()">
+<form id="frmSignIn" runat="server">
+    <div id="container" >
+        <div class="header">
+        
+            <div class="hdOne">
+                <img src="images/flipkart.png" alt="not available" class="imgLogo" />
+                <asp:TextBox runat="server" ID="txtSearch" class="searchBox"/>
+                <asp:Button Text="SignIn" runat="server" ID="btnSearch"  class="searchBtn" />
+                
+            </div>
+            <div class="hdTwo">
+            <label><a href="Registration.aspx">Sign Up?</a></label>
+            <label class="lblMargin"><a href="SignIn.aspx">SignIn</a></label>
+            </div>
+        </div>
+        <div class="menubar">
+        <div id="timerCall">  </div>
+            <ul >
+                <li class="dropdown"><a href="" class="dropbtn">Electronics</a>
+                    <div class="dropdown-content">
+                        <a href="#">Home Appliances</a> <a href="#">Mobiles</a> <a href="#">Laptop Accessories</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="#news">Men</a>
+                    <div class="dropdown-content">
+                        <a href="#">Jeans</a> <a href="#">Shirts</a> <a href="#">Shoes</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="#contact">Women</a>
+                    <div class="dropdown-content">
+                    
+                        <a href="#">Link 8</a> <a href="#">Link 9</a> <a href="#">Link 10</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="#about">Baby&kids</a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 11</a> <a href="#">Link 12</a> <a href="#">Link 13</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="caurausel">
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        1/ 7</div>
+                    <img src="images/b3847583637cda070f7fd0c73bf13d831212864808503617166.jpg" style="width: 100%">
+                    <!--<div class="text">
+                        Caption Two</div>-->
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        2/ 7</div>
+                    <img src="images/mo1.jpg" style="width: 100%">
+                    <!-- <div class="text">
+                        Caption Text</div>-->
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        3/ 7</div>
+                    <img src="images/mo.jpg" style="width: 100%">
+                    <!--<div class="text">
+                        Caption fOUR</div>-->
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        4 / 7</div>
+                    <img src="images/1.jpg" style="width: 100%">
+                    <!-- <div class="text">
+                        Caption Text</div>-->
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        5 / 7</div>
+                    <img src="images/2.jpg" style="width: 100%">
+                    <!--<div class="text">
+                        Caption Text</div>-->
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        6/ 7</div>
+                    <img src="images/mo6.jpg" style="width: 100%">
+                    <!--<div class="text">
+                        Caption Text</div>-->
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">
+                        7 / 7</div>
+                    <img src="images/mo7.jpg" style="width: 100%">
+                    <!--<div class="text">
+                        Caption Three</div>-->
+                </div>
+            </div>
+            <br />
+            <div style="text-align: center; margin-top: 10px;">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span><span
+                    class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot">
+                    </span>
+            </div>
+            <script type="text/javascript">
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+            </script>
+            <div class="dataContent">
+                asdasd</div>
+        </div>
+        <div class="advertise">
+            <img src="images/adver1.png" alt="not available" /><img src="images/adver1.png" alt="not available" /></div>
+        <div class="footer">
+            asd</div>
+    </div>
+    </form>
+</body>
+</html>

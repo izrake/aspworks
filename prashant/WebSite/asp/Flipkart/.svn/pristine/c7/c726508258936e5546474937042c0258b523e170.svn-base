@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+
+namespace Flipkart
+{
+    public partial class FlipkartMain : System.Web.UI.MasterPage
+    {
+
+       
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                if (Session["Username"].ToString().Equals("Guest"))
+                {
+                    DataLoad();
+                    
+                }
+                else
+                    DataLoad();
+            }
+        }
+
+      
+        private void DataLoad()
+        {
+            string username = Session["Username"].ToString();
+            if (username != "Guest")
+            {
+                Label lbl = Page.Master.FindControl("lblName") as Label;//this is to change the labels in the master
+                lbl.Text = Session["Name"].ToString();
+            }
+                
+           
+           
+
+            SqlConnection conObj = new SqlConnection("Data Source=pc-PC;Initial Catalog=Flipkart;Integrated Security=true");
+
+            SqlCommand cmdObj = new SqlCommand("select * from Product", conObj);
+            if (conObj.State == ConnectionState.Closed)
+            {
+                conObj.Open();
+            }
+            SqlDataAdapter adapter = new SqlDataAdapter(cmdObj);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds, "Product");
+            DataUpload.DataSource = ds.Tables["Product"];
+            DataUpload.DataBind();
+
+        }
+
+        protected void DataUpload_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "BuyNow")
+            {
+                Response.Redirect("OrderReview.aspx?ID=" + e.CommandArgument);
+            }
+        }
+
+        protected void DataUpload_ItemDataBound(object sender, DataListItemEventArgs e)
+        {
+            string username = Session["Username"].ToString();
+            if (username.Equals("prashant") || username.Equals("Guest"))
+            {
+                if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+                {
+                    Button btn = e.Item.FindControl("cmdBuyNow") as Button;
+                    btn.Visible = false;
+                }
+            }
+        }
+    }
+}

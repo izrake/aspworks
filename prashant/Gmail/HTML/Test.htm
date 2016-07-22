@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+        function MyFunction(a, b) {
+            var z = a * b;
+            return z;
+
+        }
+
+        function callMyFunction() {
+            var c = document.getElementById("a").value;
+            var d = document.getElementById("b").value;
+            var z = MyFunction(c, d);
+            document.getElementById("para").innerHTML = z;
+        }
+
+        function OpenWindow() {
+            var d = new Date();
+            document.getElementById("para").innerHTML = d.toLocaleDate2String();
+            
+
+//            window.open("http://www.google.com", "google", "toolbar=1,scrolbar=1");
+        }
+        function setTimer() {
+            setInterval(function () { Times() },1000);
+
+        }
+        function Times() {
+            var d = new Date();
+        document.getElementById("time").innerHTML = d.toLocaleTimeString();
+        }
+    
+
+</script>
+
+<style type="text/css">
+.para
+{
+    position:relative;
+    float:left;
+}
+.para:before
+{
+    
+    padding-right:2px;
+    position:absolute;
+    right:0;
+    content:'@gmail.com';
+    color:Gray;
+}
+</style>
+</head>
+<body onload="setTimer()">
+
+
+<div id="viewedpara">
+<button type="submit" onclick="OpenWindow()">Mul </button>
+<input type="text" id="a" />
+<input type="text" id="b" />
+</div><br />
+<div id="para"></div><br />
+<div id="time"></div>
+
+
+
+
+
+</body>
+</html>

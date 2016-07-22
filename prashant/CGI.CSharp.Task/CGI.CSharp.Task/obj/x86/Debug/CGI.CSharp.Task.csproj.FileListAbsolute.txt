@@ -1,0 +1,5 @@
+D:\prashant\CGI.CSharp.Task\CGI.CSharp.Task\bin\Debug\CGI.CSharp.Task.exe
+D:\prashant\CGI.CSharp.Task\CGI.CSharp.Task\bin\Debug\CGI.CSharp.Task.pdb
+D:\prashant\CGI.CSharp.Task\CGI.CSharp.Task\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\prashant\CGI.CSharp.Task\CGI.CSharp.Task\obj\x86\Debug\CGI.CSharp.Task.exe
+D:\prashant\CGI.CSharp.Task\CGI.CSharp.Task\obj\x86\Debug\CGI.CSharp.Task.pdb

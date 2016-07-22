@@ -1,0 +1,189 @@
+create table dept 
+(
+deptno number(2) primary key,
+deptname varchar2(50) not null
+);
+
+desc dept;
+desc deptnotthere;
+
+create table emp
+(
+empno number(2) primary key,
+empname varchar2(50) not null,
+deptno number(2) references dept(deptno)
+);
+
+desc emp;
+
+insert into dept values(1,'IT');
+insert into dept values(2,'Aero');
+insert into dept values(3,'Media');
+select * from dept;
+insert into dept values(3,'ECE');
+insert into dept values(null,'ECE');
+
+insert into emp values(1,'Hard Work',4);
+select * from emp;
+insert into emp values(1,'Hard Work',1);
+insert into emp values(2,'Smart Work',1);
+insert into emp values(3,'Gorilla',2);
+insert into emp values(4,'Panda',null);
+
+select * from dept;
+select * from emp;
+
+select empno, empname, deptname
+from emp
+join dept
+on emp.deptno = dept.deptno;
+
+
+select e.empno, e.empname, d.deptname
+from emp e
+join dept d
+on e.deptno = d.deptno;
+
+select empno, empname, deptname
+from emp
+inner join dept
+on emp.deptno = dept.deptno;
+
+select empno, empname, deptname, emp.deptno "EMP-DEPTNO", dept.deptno "DEPT-DEPTNO"
+from emp
+join dept
+on emp.deptno = dept.deptno;
+
+select empno, empname, deptname
+from emp
+left outer join dept
+on emp.deptno = dept.deptno;
+
+select empno, empname, deptname
+from emp
+right outer join dept
+on emp.deptno = dept.deptno;
+
+select empno, empname, deptname
+from emp
+full outer join dept
+on emp.deptno = dept.deptno;
+
+select empno, empname from emp ;
+select emp.empno, emp.empname from emp ;
+
+select e.empno, e.empname, d.deptname
+from emp e
+join dept d
+on e.deptno = d.deptno(+);
+
+select e.empno, e.empname, d.deptname
+from emp e
+join dept d
+on e.deptno(+) = d.deptno;
+
+select e.empno, e.empname, d.deptname
+from emp e
+join dept d
+on e.deptno(+) = d.deptno(+);
+
+--constraints
+
+create table demo(
+did number(2) primary key ,
+demoname char(20) unique,
+subject char(20) default 'IT',
+demoday char(50) not null,
+attendance char(1)
+); 
+
+insert into  demo (did,demoday) values(1,'Monday');
+insert into  demo (did,demoday) values(1,'Tuesday');
+insert into  demo (did,demoday) values(2,'Tuesday');
+insert into  demo (subject,did,demoday) values('Geography', 3,'Tuesday');
+select * from demo;
+
+select * from user_constraints where table_name = 'DEMO';
+ 
+
+create table demo1(
+did number(2) constraint "PK_Demo1" primary key ,
+demoname char(20) constraint "UK_Demo1" unique,
+subject char(20) default 'IT',
+demoday char(50) not null,
+attendance char(1)
+);
+
+select * from user_constraints where table_name = 'DEMO1';
+
+create table demo2(
+did number(2)  ,
+demoname char(20) ,
+subject char(20),
+demoday char(50) ,
+attendance char(1)
+);
+
+alter table demo2
+add constraint "PK_demo2" primary key (did);
+
+alter table demo2
+add constraint "UK_demo2" unique  (demoname);
+
+select * From user_constraints where table_name='DEMO2'
+
+insert into  demo2 (subject,did,demoname,demoday) 
+values('Geography', 5,'constraints','Tuesday');
+
+insert into  demo2 (subject,did,demoname,demoday) 
+values('Geography', 6,'constraints','Tuesday');
+
+select * from demo2;
+
+alter table demo2
+disable constraint "UK_demo2" 
+
+alter table demo2
+enable constraint "UK_demo2" 
+
+delete from demo2 where did=6;
+
+alter table demo2
+drop constraint "UK_demo2" 
+
+create table place( 
+city char(20) 
+constraint chkCity 
+check (city = upper(city))
+--check (city in ("Chennai","CBE","Tchy","Madurai"))
+);
+
+insert into place values ('CHE');
+insert into place values ('CHEnnai');
+
+select * from place;
+
+select * from demo;
+update demo
+set demoname ='TimeBeforeLunch'
+where did = 1;
+
+select * from demo;
+update demo
+set subject ='Psychology'
+--where did = 1;
+
+delete from demo
+where did = 3
+
+delete  from demo;
+
+rollback;
+commit;
+
+
+
+create table ProductDetails(P_ID int identity(1,1)
+constraint P_ID_Pk primary key,P_Name varchar(30) not null,
+P_Description varchar(30) not null,P_Quantity smallint not null
+);

@@ -1,0 +1,167 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Web.Security;	
+
+namespace Flipkart
+{
+    public partial class AdminFlipkart : System.Web.UI.Page
+    {
+
+        SqlConnection conObj = new SqlConnection();
+        SqlCommand cmdObj = new SqlCommand();
+        
+        protected void Page_Load(object sender, EventArgs e)
+        {
+           
+            conObj = new SqlConnection(ConfigurationManager.ConnectionStrings["ConCGI"].ConnectionString);
+            //if (!IsPostBack)
+            //{
+            //    //if (Session["Username"] == null)
+            //    //{
+            //    //    Response.Redirect("SignIn.aspx");
+            //    //}
+
+            //}
+            
+        }
+
+
+
+       
+
+        protected void btn_Submit(object sender, EventArgs e)
+        {
+            ValidateTheProductCode vp=new ValidateTheProductCode();
+           
+            cmdObj = new SqlCommand("insertProductDetails", conObj);
+            cmdObj.CommandType = CommandType.StoredProcedure;
+            cmdObj.Parameters.AddWithValue("@ProductCode", vp.validateProduct());
+            cmdObj.Parameters.AddWithValue("@ProductName", txtPName.Text);
+            cmdObj.Parameters.AddWithValue("@Category", ddlPCategory.SelectedItem.ToString());
+            cmdObj.Parameters.AddWithValue("@SubCategory",ddlPSubCategory.SelectedItem.ToString());
+            cmdObj.Parameters.AddWithValue("@Description", txtPDescription.Text);
+            cmdObj.Parameters.AddWithValue("@Price",txtPPrice.Text);
+            cmdObj.Parameters.AddWithValue("@Qty", txtPQty.Text);
+            int len = flImage.PostedFile.ContentLength;
+            byte[] img = new byte[len];
+            flImage.PostedFile.InputStream.Read(img, 0, len);
+            cmdObj.Parameters.AddWithValue("@PImage", img);
+
+            if (conObj.State == ConnectionState.Closed)
+                conObj.Open();
+
+            int res = cmdObj.ExecuteNonQuery();
+
+            if (res > 0)
+            {
+                
+            }
+            cmdObj.Dispose();
+            conObj.Close();
+        }
+
+        protected void ddlPCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ddlPSubCategory.Items.Clear();
+            if (ddlPCategory.SelectedIndex == 1)
+            {
+                ddlPSubCategory.Items.Add("Home Appliances");
+                ddlPSubCategory.Items.Add("Mobile");
+                ddlPSubCategory.Items.Add("Laptop");
+            }
+            if (ddlPCategory.SelectedIndex == 2)
+            {
+                ddlPSubCategory.Items.Add("LifeStyle BrandStore");
+                ddlPSubCategory.Items.Add("Trending");
+                ddlPSubCategory.Items.Add("Natural Beauty");
+            }
+            if (ddlPCategory.SelectedIndex == 3)
+            {
+                ddlPSubCategory.Items.Add("Footwear");
+                ddlPSubCategory.Items.Add("Clothing");
+                ddlPSubCategory.Items.Add("Watches");
+            }
+            if (ddlPCategory.SelectedIndex == 4)
+            {
+                ddlPSubCategory.Items.Add("Baby Care");
+                ddlPSubCategory.Items.Add("Kids Sports");
+                ddlPSubCategory.Items.Add("Toys");
+            }
+        }
+
+        protected void cmdSignOut_Click(object sender, EventArgs e)
+        {
+            //Session.Remove("Username");
+            //Session.RemoveAll();
+            //Session.Abandon();
+            //Response.Redirect("SignIn.aspx");
+            FormsAuthentication.SignOut();
+        }
+
+        protected void DataUpload_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "BuyNow")
+            {
+                Response.Redirect("OrderReview.aspx?PID=" + e.CommandArgument);
+            }
+        }
+
+       
+    }
+  public  class ValidateTheProductCode
+    {
+
+        public string validateProduct()
+        {
+            SqlConnection conObj = new SqlConnection(ConfigurationManager.ConnectionStrings["ConCGI"].ConnectionString);
+            SqlCommand cmdObj = new SqlCommand("select ProductCode from Product order by ProductCode Desc", conObj);
+            if (conObj.State == ConnectionState.Closed)
+                conObj.Open();
+
+            SqlDataReader rdr = cmdObj.ExecuteReader();
+
+            rdr.Read();
+
+            
+            
+
+            if (rdr.HasRows)
+            {
+                string pc = rdr[0].ToString();
+                int pcid = Convert.ToInt32(pc.Substring(2, 3));
+                pcid++;
+                //int s= Convert.ToInt32(rdr[0].ToString().Substring(2,3));
+                //int sss = s + 1;
+                //string ss = "PR00"+sss;
+                //return ss;
+                if (pcid > 10 && pcid < 100)
+                {
+                    string s = "PR0" + pcid;
+                    return s;
+                }
+
+                else if (pcid < 10)
+                {
+                    string s = "PR00" + pcid;
+                    return s;
+                }
+                else
+                {
+                    string s = "PR" + pcid;
+                    return s;
+                }
+
+            }
+            else
+                return "PR001";
+          
+        }
+    }
+}

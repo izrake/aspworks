@@ -1,0 +1,103 @@
+
+#include<iostream>
+using namespace std;
+
+struct node
+{
+    int data;
+    node *link;
+};
+class stack
+{
+private:
+    struct node *top;
+public:
+    stack();
+    void push(int n);
+    void pop();
+    void display();
+};
+stack::stack()
+{
+    top=NULL;
+}
+void stack::push(int n)
+{
+    node *tmp;
+    tmp= new node;
+    if(tmp==NULL)
+        cout<<"\nStack is empty";
+    else
+    {
+        tmp->data=n;
+        tmp->link=top;
+        top=tmp;
+    }
+}
+void stack::pop()
+{
+    if(top==NULL)
+        cout<<"\nStack is empty";
+    else
+    {
+        node *tmp;
+        int n;
+        tmp=top;
+        n=tmp->data;
+        cout<<endl<<"Popped Value : "<<n;
+        top=top->link;
+        delete tmp;
+    }
+}
+void stack::display()
+{
+    node *tmp;
+    tmp=top;
+    if(tmp==NULL)
+        cout<<"\nStack is empty";
+    else
+    {
+        cout<<"\nThe elements in the stack are:";
+        while(tmp!=NULL)
+        {
+            cout<<tmp->data;
+            tmp=tmp->link;
+        }
+    }
+}
+int main()
+{
+
+    stack s;
+    int x,ch;
+    do
+    {
+        cout<<"\n1.Push";
+        cout<<"\n2.Pop";
+        cout<<"\n3.Display";
+        cout<<"\n4.Exit";
+        cout<<"\nEnter the choice";
+        cin>>ch;
+        switch(ch)
+        {
+        case 1:
+            cout<<"\nEnter the element to be pushed";
+            cin>>x;
+            s.push(x);
+            cout<<"\nThe element is inserted";
+            break;
+        case 2:
+            s.pop();
+            break;
+        case 3:
+            s.display();
+        case 4:
+            break;
+        }
+    }
+    while(ch!=4);
+    return 0;
+}
+
+
+balaji.nanjappa

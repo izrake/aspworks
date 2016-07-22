@@ -1,0 +1,101 @@
+select * from user_tables;
+--GETTING ALL THE USER DEFINED TABLES
+select * from EMPLOYEES;
+-- SELECTING ALL THE COLUMNS
+SELECT FIRST_NAME FROM EMPLOYEES;
+-- SELECTING SPECIFIC COLUMNS
+SELECT LAST_NAME, FIRST_NAME FROM EMPLOYEES;
+-- SELECTING MULTIPLE COLUMNS
+SELECT 'Employee First Name : ' || FIRST_NAME FROM EMPLOYEES;
+--CONCATENATION OPERATOR
+SELECT FIRST_NAME "EMP FIRST NAME" FROM EMPLOYEES;
+--USER DEFINED COLUMN HEADINGS
+SELECT FIRST_NAME, SALARY, SALARY+500 FROM EMPLOYEES;
+SELECT FIRST_NAME, SALARY+500 FROM EMPLOYEES;
+SELECT FIRST_NAME, SALARY+500 "SALARY WITH SPOT INCREMENT" FROM EMPLOYEES;
+--ARITMETIC OPERATOR
+
+SELECT * FROM EMPLOYEES 
+WHERE COMMISSION_PCT IS NULL;
+
+SELECT * FROM EMPLOYEES 
+WHERE COMMISSION_PCT IS NOT NULL;
+
+SELECT JOB_ID FROM EMPLOYEES;
+SELECT DISTINCT JOB_ID FROM EMPLOYEES;
+
+==============================================
+SELECT * FROM EMPLOYEES 
+WHERE EMPLOYEE_ID < 105;
+
+SELECT * FROM EMPLOYEES 
+WHERE EMPLOYEE_ID <= 105;
+
+SELECT SALARY+COMMISSION_PCT FROM EMPLOYEES;
+
+SELECT * FROM EMPLOYEES 
+WHERE EMPLOYEE_ID != 105;
+
+SELECT * FROM EMPLOYEES 
+WHERE JOB_ID = 'IT_PROG' AND SALARY > 6000;
+
+SELECT * FROM EMPLOYEES 
+WHERE JOB_ID = 'IT_PROG' OR SALARY > 6000;
+
+select * from employees
+where first_name ='Steven' or first_name = 'Neena' or first_name='Lex'
+
+--List Operators
+select * from employees
+where first_name in('Steven' ,'Neena' ,'Lex')
+
+select * from employees
+where first_name not in('Steven' ,'Neena' ,'Lex')
+
+select * from employees
+where salary >5999 and salary <9001
+
+select * from employees
+where salary between 6000 and 9000
+
+select * from employees
+where first_name like '%r'
+
+select * from employees
+where first_name like 'P%r'
+
+select * from employees
+where first_name like '__t%'
+
+
+select * from employees
+where first_name like '_____'
+
+select * from employees
+ order by email;
+ 
+ select * from employees
+ order by email asc;
+ 
+  select * from employees
+ order by email desc;
+ 
+select first_name, last_name from employees
+ order by first_name asc, last_name asc;
+ 
+ select first_name, last_name from employees
+ order by 1 asc, 2 asc;
+
+ select first_name || '- ' || last_name from employees
+
+ 
+  select first_name, last_name from employees
+ order by 1 asc, 2 desc;
+
+ 
+   select upper(first_name), lower(last_name) from employees
+ --order by 1 asc, 2 desc;
+ 
+ select sum(salary), max(salary), min(salary), avg(salary) from employees;
+ 
+ select length(first_name), first_name from employees

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <form>
+    <div id="container" style="width: 1200px; height: 800px">
+        <div id="logo" style="width: 1200px; height: 150px; background-color: Aqua">
+            <img src="image/Chrysanthemum.jpg" width="1200px;" height="150px" alt="Not availdable" />
+        </div>
+        <div id="navigation" style="width: 300px; height: 600px; background-color: Green;
+            float: left">
+        </div>
+        <div id="content" style="width: 600px; height: 600px; background-color: White; float: left">
+            <h1 style="text-align: center; font-size: 20px; color: Maroon">
+                Registration</h1>
+            <table border="1" align="center">
+                <tr>
+                    <td>
+                        <label>
+                            First Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="txtFName" placeholder="FirsName" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Last Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="txtLName" placeholder="LastName" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Country</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="rdIndia" name="country" required />
+                        India
+                        <input type="radio" id="rdOther" name="country" required />
+                        Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Username:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="txtUsername" placeholder="Username" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" id="txtPassword" placeholder="Password" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Gender:</label>
+                    </td>
+                    <td id="selGender">
+                        <select>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submit" id="btnSubmitt" formvalidate />&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="submit" value="Reset" id="btnReset" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="Div1" style="width: 300px; height: 600px; background-color: Navy; float: right">
+        </div>
+        <div id="Div2" style="width: 1200px; height: 50px; background-color: Black; float: left">
+        </div>
+    </div>
+    </form>
+</body>
+</html>

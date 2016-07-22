@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+
+namespace Flipkart
+{
+    public partial class OrderReview : System.Web.UI.Page
+    {
+        SqlConnection conObj = new SqlConnection();
+      
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            
+            
+            if (!IsPostBack)
+            {
+                conObj = new SqlConnection(ConfigurationManager.ConnectionStrings["ConCGI"].ConnectionString);
+                if (!IsPostBack)
+                {
+                    if (Session["Username"] == null)
+                    {
+                        Response.Redirect("SignIn.aspx");
+                    }
+                    else
+                    {
+                        DataLoad();
+
+                    }
+                }
+            }
+        }
+
+        private void DataLoad()
+        {
+
+            lblUserName.Text = Session["Name"].ToString();
+            string id=Request.QueryString["ID"].ToString();
+            imgBuy.ImageUrl="~/ImageHandler.ashx?ID=" + id;
+
+            SqlCommand cmdObj = new SqlCommand("select * from Product where ProductCode=@id", conObj);
+
+            cmdObj.Parameters.AddWithValue("@id", id);
+            if (conObj.State == ConnectionState.Closed)
+            {
+                conObj.Open();
+            }
+
+            SqlDataReader rdr = cmdObj.ExecuteReader();
+            rdr.Read();
+
+            if (rdr.HasRows)
+            {
+                
+                
+                lblPrice.Text = rdr["Price"].ToString() ;
+                lblDesc.Text = rdr["P_Description"].ToString();
+            }
+
+            rdr.Close();
+            conObj.Close();
+
+        }
+    }
+}
